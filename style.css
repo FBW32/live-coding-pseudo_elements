@@ -1,0 +1,115 @@
+/* PSEUDO ELEMENTS */
+
+/* selector::pseudo-element {
+  property: value;
+} */
+
+/* AFTER */
+
+.one::after {
+  content: " <- AFTER - 1";
+  color: blue;
+}
+
+.two::after {
+  content: " SOLD OUT!";
+  color: red;
+  font-size: 200%;
+}
+
+/* BEFORE */
+
+.three::before {
+  content: "THIRD PARAGRAPH -> ";
+  color: hotpink;
+}
+
+/* FIRST-LETTER */
+
+p::first-letter {
+  font-size: 250%;
+  color: chartreuse;
+}
+
+/* FIRST-LINE */
+
+p::first-line {
+  color: red;
+  font-size: 130%;
+}
+
+/* PLACEHOLDER */
+
+input::placeholder {
+  color: blue;
+  font-style: italic;
+  letter-spacing: 5px;
+}
+
+/* SELECTION */
+
+li::selection {
+  color: pink;
+}
+
+/* CREATING SHAPES */
+
+.talkbubble {
+  margin: 0 auto;
+  width: 120px;
+  height: 80px;
+  background: red;
+  position: relative;
+  border-radius: 10px;
+}
+
+.talkbubble::before {
+  content: "";
+  position: absolute;
+  left: 100%;
+  top: 30px;
+  border-top: 13px solid transparent;
+  border-left: 26px solid red;
+  border-bottom: 13px solid transparent;
+}
+
+/* CLIP PATH */
+
+.clip-1 {
+  margin: 100px auto;
+  width: 400px;
+  height: 400px;
+  -webkit-clip-path: polygon(
+    0 84%,
+    15% 15%,
+    15% 0%,
+    85% 0%,
+    54% 44%,
+    94% 97%,
+    100% 85%,
+    85% 85%,
+    85% 100%,
+    15% 100%,
+    42% 53%,
+    0% 85%
+  );
+  clip-path: polygon(
+    0 84%,
+    15% 15%,
+    15% 0%,
+    85% 0%,
+    54% 44%,
+    94% 97%,
+    100% 85%,
+    85% 85%,
+    85% 100%,
+    15% 100%,
+    42% 53%,
+    0% 85%
+  );
+  background: url("https://mymodernmet.com/wp/wp-content/uploads/2019/05/xavier-portela-hong-kong-glow-11.jpg")
+    center;
+
+  /* transform: rotate(45deg); */
+  transform: scale(0.75) rotate(90deg);
+}
